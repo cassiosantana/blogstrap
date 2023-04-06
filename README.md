@@ -26,6 +26,7 @@
 - [07 - Atualizando um Article](https://github.com/cassiosantana/ror_mvc_blog/issues/7)
 - [08 - Excluindo um Article](https://github.com/cassiosantana/ror_mvc_blog/issues/8)
 - [09 - Adicionando Bootstrap 5](https://github.com/cassiosantana/ror_mvc_blog/issues/9)
+- [09.1 - JavaScript do Bootstrap](https://github.com/cassiosantana/ror_mvc_blog/issues/10)
 - [10 - Dividir para Conquistar 1/3](https://github.com/cassiosantana/ror_mvc_blog/issues/11)
 - [11 - Dividir para Conquistar 2/3](https://github.com/cassiosantana/ror_mvc_blog/issues/12)
 - [12 - Dividir para Conquistar 3/3](https://github.com/cassiosantana/ror_mvc_blog/issues/13)
