@@ -1,0 +1,22 @@
+<h1>Novo Article</h1>
+
+<%# 
+  Utilizando um helper
+  Com este código podemos facilmente criar um formulário sem a necessidade
+  de ficar digitando html
+%>
+<%= form_with model: @article do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
