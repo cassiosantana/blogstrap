@@ -27,6 +27,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   private
 
   # No rails temos uma forma de pegar os parâmetros e coloca-los de forma
