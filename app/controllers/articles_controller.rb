@@ -33,8 +33,6 @@ class ArticlesController < ApplicationController
   def edit; end
 
   def update
-    @article = Article.find(params[:id])
-
     if @article.update(article_params)
       redirect_to @article
     else
