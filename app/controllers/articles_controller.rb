@@ -54,4 +54,8 @@ class ArticlesController < ApplicationController
     # params são os parâmetros fornecidos pelo controller.
     params.require(:article).permit(:title, :body)
   end
+
+  def set_article
+    @article = Article.find(params[:id])
+  end
 end
