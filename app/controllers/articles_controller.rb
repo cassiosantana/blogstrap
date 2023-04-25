@@ -46,6 +46,12 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    @article.destroy
+
+    redirect_to root_path
+  end
+
   private
 
   # No rails temos uma forma de pegar os parâmetros e coloca-los de forma
