@@ -1,7 +1,7 @@
 <article class="blog-post">
   <h2 class="blog-post-title"><%= article.title %></h2>
   <p class="blog-post-meta"><%= month_day_comma_year(article.created_at) %> <a href="#">Chris</a></p>
-  <p><%= article.body %></p>
+  <p><%= truncate(article.body, length: 150) %></p>
 
   <%= link_to "Edit", edit_article_path(article), class: 'btn btn-secondary' %>
   <%= link_to "Destroy", article_path(article), method: :delete, data: { confirm: 'Are sure?' },
