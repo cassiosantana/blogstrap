@@ -9,11 +9,14 @@ class ArticlesController < ApplicationController
 
     # obtém um objeto com parâmetros da requisição da url
     current_page = (params[:page] || 1).to_i
+    highlights_ids = @highlights.pluck(:id).join(',')
 
     # Este código faz estas operações:
     # 1 - busca do banco de dados os artigos na order do primeiro para o ultimo
     # 2 - define que na página atual só devem ser apresentados apenas 2 artigos por página
-    @articles = Article.order(created_at: :desc).page(current_page).per(2)
+    @articles = Article.order(created_at: :desc)
+                       .where("id NOT IN(#{highlights_ids})")
+                       .page(current_page).per(2)
   end
 
   def show; end
