@@ -6,4 +6,5 @@ class Article < ApplicationRecord
   validates :body, presence: true, length: { minimum: 10 }
 
   scope :descending_order, -> { order(created_at: :desc) }
+  scope :without_highlights, ->(ids) { where("id NOT IN(#{ids})") }
 end
