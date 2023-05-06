@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
     # 2 - define que na página atual só devem ser apresentados apenas 2 artigos por página
     @articles = Article.without_highlights(highlights_ids)
                        .descending_order
-                       .page(current_page).per(2)
+                       .page(current_page)
   end
 
   def show; end
