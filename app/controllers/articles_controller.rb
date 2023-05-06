@@ -14,8 +14,8 @@ class ArticlesController < ApplicationController
     # Este código faz estas operações:
     # 1 - busca do banco de dados os artigos na order do primeiro para o ultimo
     # 2 - define que na página atual só devem ser apresentados apenas 2 artigos por página
-    @articles = Article.descending_order
-                       .where("id NOT IN(#{highlights_ids})")
+    @articles = Article.without_highlights(highlights_ids)
+                       .descending_order
                        .page(current_page).per(2)
   end
 
