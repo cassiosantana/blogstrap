@@ -4,4 +4,6 @@ class Article < ApplicationRecord
   # quantidades de caracteres mínimos
   validates :title, presence: true, length: { minimum: 5 }
   validates :body, presence: true, length: { minimum: 10 }
+
+  scope :descending_order, -> { order(created_at: :desc) }
 end
