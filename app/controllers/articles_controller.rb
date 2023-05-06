@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
-    @highlights = Article.order(created_at: :desc).first(3)
+    @highlights = Article.descending_order.first(3)
 
     # obtém um objeto com parâmetros da requisição da url
     current_page = (params[:page] || 1).to_i
@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
     # Este código faz estas operações:
     # 1 - busca do banco de dados os artigos na order do primeiro para o ultimo
     # 2 - define que na página atual só devem ser apresentados apenas 2 artigos por página
-    @articles = Article.order(created_at: :desc)
+    @articles = Article.descending_order
                        .where("id NOT IN(#{highlights_ids})")
                        .page(current_page).per(2)
   end
