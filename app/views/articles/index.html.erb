@@ -1,8 +1,8 @@
-<%= render 'longer_featured' %>
+<%= render 'longer_featured', article: @highlights[0] %>
 
 <div class="row mb-2">
-  <%= render 'medium_featured' %>
-  <%= render 'medium_featured' %>
+  <%= render 'medium_featured', article: @highlights[1] %>
+  <%= render 'medium_featured', article: @highlights[2] %>
 </div>
 
 <div class="row g-5">
