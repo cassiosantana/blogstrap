@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
+  # define que o artigo pertence a categoria
+  belongs_to :category
+
   # validações para o title e body que para o artigo ser salvo
   # é necessário que estes campos estejam preenchidos e com suas
   # quantidades de caracteres mínimos
