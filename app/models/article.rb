@@ -10,5 +10,5 @@ class Article < ApplicationRecord
 
   # escope serve para tirar a lógica do controller
   scope :descending_order, -> { order(created_at: :desc) }
-  scope :without_highlights, ->(ids) { where("id NOT IN(#{ids})") }
+  scope :without_highlights, ->(ids) { where("id NOT IN(#{ids})") if ids.present? }
 end
