@@ -25,6 +25,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
+        # estas mensagens no ror são chamadas de flash messages pois são mostradas apenas uma vez
         format.html { redirect_to categories_url, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
