@@ -68,7 +68,7 @@ class ArticlesController < ApplicationController
   # Temos uma forma de nos defender disso no rails que se chama 'strong parameters'.
   def article_params
     # params são os parâmetros fornecidos pelo controller.
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :category_id)
   end
 
   def set_article
