@@ -2,6 +2,7 @@
 
 # Article Controller
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
