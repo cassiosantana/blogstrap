@@ -17,6 +17,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener', '~> 1.8'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
@@ -33,6 +34,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.9'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
-gem 'letter_opener', '~> 1.8'
 gem 'rubocop-rails', '~> 2.19', '>= 2.19.1'
 gem 'simple_form', '~> 5.2'
