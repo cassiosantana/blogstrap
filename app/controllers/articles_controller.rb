@@ -23,11 +23,13 @@ class ArticlesController < ApplicationController
   def show; end
 
   def new
-    @article = Article.new
+    # define que o novo artigo será vinculado ao usuário atual.
+    @article = current_user.articles.new
   end
 
   def create
-    @article = Article.new(article_params)
+    # define que o novo artigo será vinculado ao usuário atual.
+    @article = current_user.articles.new(article_params)
 
     if @article.save
       # o rails entende este código como se estivéssemos mandando redirecionar
