@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # definindo a página inicial do rails como a index sem precisar ficar digitando manualmente o localhost:3000/articles
   root 'articles#index'
   # get '/articles', to: 'articles#index'
