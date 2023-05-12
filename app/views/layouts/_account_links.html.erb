@@ -1,10 +1,15 @@
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
+<% if user_signed_in? %>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <%= current_user.email %>
+    </button>
+    <ul class="dropdown-menu">
+      <li><%= link_to 'Edit User', edit_user_registration_path, class: 'dropdown-item' %></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
+    </ul>
+  </div>
+<% else %>
+  <li><%= link_to 'Sign in', new_user_session_path, class: 'link-secondary' %></li>
+  <li><%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-sm btn-outline-secondary' %></li>
+<% end %>
