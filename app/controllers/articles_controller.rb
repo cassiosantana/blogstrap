@@ -76,5 +76,11 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+    # instrução do pundit que aplica as regras definidas lá no article_policy.rb
+    # Ele basicamente vai pegar o article que acabou de ser encontrado no código acima,
+    # vai mandar para o application_policy.rb para ser utilizado no método initialize
+    # o user do initialize será o usuário atual logado, e o record será este que foi definido
+    # na instrução authorize.
+    authorize @article
   end
 end
