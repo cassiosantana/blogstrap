@@ -12,5 +12,9 @@ class ArticlePolicy < ApplicationPolicy
       user.id == record.user.id
     end
 
+    def destroy?
+      user.id == record.user.id
+    end
+
   end
 end
