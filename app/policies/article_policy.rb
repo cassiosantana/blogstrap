@@ -8,5 +8,9 @@ class ArticlePolicy < ApplicationPolicy
       true
     end
 
+    def update?
+      user.id == record.user.id
+    end
+
   end
 end
