@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.sorted
+    @categories = policy_scope(Category.sorted)
   end
 
   # GET /categories/new
