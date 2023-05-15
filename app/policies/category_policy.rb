@@ -6,10 +6,14 @@ class CategoryPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin?
+    user&.admin?
   end
 
   def update?
+    user&.admin?
+  end
+
+  def destroy?
     user.admin?
   end
 end
