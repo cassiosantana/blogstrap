@@ -1,7 +1,11 @@
 class CategoryPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      if user&.admin?
+        scope.all
+      else
+        raise Pundit::NotAuthorizedError
+      end
     end
   end
 
