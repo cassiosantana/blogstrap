@@ -1,7 +1,7 @@
 class CategoryPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      if user&.admin?
+      if user.admin?
         scope.all
       else
         raise Pundit::NotAuthorizedError
@@ -14,11 +14,11 @@ class CategoryPolicy < ApplicationPolicy
   end
 
   def create?
-    user&.admin?
+    user.admin?
   end
 
   def update?
-    user&.admin?
+    user.admin?
   end
 
   def destroy?
