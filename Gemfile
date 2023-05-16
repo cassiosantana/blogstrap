@@ -36,3 +36,7 @@ gem 'devise', '~> 4.9'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'rubocop-rails', '~> 2.19', '>= 2.19.1'
 gem 'simple_form', '~> 5.2'
+
+gem "pundit", "~> 2.3"
+
+gem 'rolify', '~> 6.0', '>= 6.0.1'
