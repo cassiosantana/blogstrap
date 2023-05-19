@@ -2,22 +2,29 @@
 
 # Article Controller
 class ArticlesController < ApplicationController
+  include Paginable
+
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
-    @highlights = Article.descending_order.first(3)
+    category = Category.find_by_name(params[:category]) if params[:category].present?
 
-    # obtém um objeto com parâmetros da requisição da url
-    current_page = (params[:page] || 1).to_i
+    @highlights = Article.filter_by_category(category)
+                         .descending_order
+                         .first(3)
+
     highlights_ids = @highlights.pluck(:id).join(',')
 
     # Este código faz estas operações:
     # 1 - busca do banco de dados os artigos na order do primeiro para o ultimo
     # 2 - define que na página atual só devem ser apresentados apenas 2 artigos por página
     @articles = Article.without_highlights(highlights_ids)
+                       .filter_by_category(category)
                        .descending_order
                        .page(current_page)
+
+    @categories = Category.sorted
   end
 
   def show; end
