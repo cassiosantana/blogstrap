@@ -8,7 +8,9 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
-    @highlights = Article.filter_by_category(params[:category_id]).descending_order.first(3)
+    @highlights = Article.filter_by_category(params[:category_id])
+                         .descending_order
+                         .first(3)
 
     highlights_ids = @highlights.pluck(:id).join(',')
 
@@ -16,6 +18,7 @@ class ArticlesController < ApplicationController
     # 1 - busca do banco de dados os artigos na order do primeiro para o ultimo
     # 2 - define que na página atual só devem ser apresentados apenas 2 artigos por página
     @articles = Article.without_highlights(highlights_ids)
+                       .filter_by_category(params[:category_id])
                        .descending_order
                        .page(current_page)
   end
