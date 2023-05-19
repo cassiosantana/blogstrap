@@ -21,6 +21,8 @@ class ArticlesController < ApplicationController
                        .filter_by_category(params[:category_id])
                        .descending_order
                        .page(current_page)
+
+    @categories = Category.sorted
   end
 
   def show; end
