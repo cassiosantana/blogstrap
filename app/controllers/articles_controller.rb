@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
-    @highlights = Article.descending_order.first(3)
+    @highlights = Article.filter_by_category(params[:category_id]).descending_order.first(3)
 
     highlights_ids = @highlights.pluck(:id).join(',')
 
