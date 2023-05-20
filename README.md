@@ -15,18 +15,38 @@
 - Bootstrap
 - l18n, Deploy, CI, etc...
 
-<p>Meu progresso é gerenciado por um <a href="https://github.com/users/cassiosantana/projects/33" target="_blank">project</a> referente a este curso e cada issue representa uma aula:</p>
+<p>Meu progresso é gerenciado por um <a href="https://github.com/users/cassiosantana/projects/33" target="_blank">project</a> referente a este curso e cada issue representa uma aula</p>
 
-- [01 - Apresentação](https://github.com/cassiosantana/ror_mvc_blog/issues/1)
-- [02 - Criação do Projeto](https://github.com/cassiosantana/ror_mvc_blog/issues/2)
-- [03 - O que é MVC e CRUD?](https://github.com/cassiosantana/ror_mvc_blog/issues/3)
-- [04 - Listando Articles](https://github.com/cassiosantana/ror_mvc_blog/issues/4)
-- [05 - Mostrando um Article](https://github.com/cassiosantana/ror_mvc_blog/issues/5)
-- [06 - Criando um Article](https://github.com/cassiosantana/ror_mvc_blog/issues/6)
-- [07 - Atualizando um Article](https://github.com/cassiosantana/ror_mvc_blog/issues/7)
-- [08 - Excluindo um Article](https://github.com/cassiosantana/ror_mvc_blog/issues/8)
-- [09 - Adicionando Bootstrap 5](https://github.com/cassiosantana/ror_mvc_blog/issues/9)
-- [09.1 - JavaScript do Bootstrap](https://github.com/cassiosantana/ror_mvc_blog/issues/10)
-- [10 - Dividir para Conquistar 1/3](https://github.com/cassiosantana/ror_mvc_blog/issues/11)
-- [11 - Dividir para Conquistar 2/3](https://github.com/cassiosantana/ror_mvc_blog/issues/12)
-- [12 - Dividir para Conquistar 3/3](https://github.com/cassiosantana/ror_mvc_blog/issues/13)
+<p align="center">
+  <img src="https://github.com/cassiosantana/blogstrap/assets/43866953/f3733066-bd51-4a7d-ad92-6bfc9bb8729e">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://github.com/cassiosantana/blogstrap/assets/43866953/4aaef14c-436e-4900-b5ef-1695768074be">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://github.com/cassiosantana/blogstrap/assets/43866953/3a3c1141-5086-480c-adf7-fde907174108">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://github.com/cassiosantana/blogstrap/assets/43866953/a2246961-c5fc-4ac1-a696-ba6658b72d00">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://github.com/cassiosantana/blogstrap/assets/43866953/1f6ae348-daca-466c-803e-4c83540cede0">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://github.com/cassiosantana/blogstrap/assets/43866953/4520a447-daed-4075-b5f5-3abce2a4593f">
+</p>
