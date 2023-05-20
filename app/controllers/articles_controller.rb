@@ -26,6 +26,8 @@ class ArticlesController < ApplicationController
                        .filter_by_category(category)
                        .descending_order
                        .page(current_page)
+
+    @archives = Article.group_by_month(:created_at, format: '%B %Y').count
   end
 
   def show; end
