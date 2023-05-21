@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
     @highlights = Article.includes(:category, :user)
                          .filter_by_category(category)
+                         .filter_by_archive(params[:month_year])
                          .descending_order
                          .first(3)
 
@@ -24,8 +25,11 @@ class ArticlesController < ApplicationController
     @articles = Article.includes(:category, :user)
                        .without_highlights(highlights_ids)
                        .filter_by_category(category)
+                       .filter_by_archive(params[:month_year])
                        .descending_order
                        .page(current_page)
+
+    @archives = Article.group_by_month(:created_at, format: '%B %Y').count
   end
 
   def show; end
