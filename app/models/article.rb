@@ -10,7 +10,7 @@ class Article < ApplicationRecord
   validates :body, presence: true, length: { minimum: 10 }
 
   # configura a quantidade de artigos a ser exibido por página
-  paginates_per 2
+  paginates_per 10
 
   # escope serve para tirar a lógica do controller
   scope :descending_order, -> { order(created_at: :desc) }
