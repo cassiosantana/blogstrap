@@ -19,7 +19,7 @@ class Article < ApplicationRecord
   scope :filter_by_archive, lambda { |month_year|
     if month_year
       date = Date.strptime(month_year, '%B %Y')
-      where created_at: date.beginning_of_month..date.end_of_month
+      where created_at: date.beginning_of_month..date.end_of_month.next_day
     end
   }
 end
