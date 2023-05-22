@@ -14,15 +14,10 @@
 
 <!--  esta classe mt-3 é do bootstrap-->
   <h2 class="mt-3">Comments</h2>
-  <% @article.comments.each do |comment| %>
-    <div class="card  mb-3">
-      <div class="card-body">
-        <h5 class="card-title"><%= month_day_comma_year(comment.created_at) %></h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">Commenter: <%= comment.user.email %></h6>
-        <p class="card-text"><%= comment.body %></p>
-      </div>
-    </div>
-  <% end %>
+
+<!--  esta forma simplificada do rails já entende que preceisa renderizar
+cada comentário existente em @article -->
+  <%= render @article.comments %>
 
   <h2>Add a comment:</h2>
   <%= simple_form_for [@article, @article.comments.build] do |f| %>
