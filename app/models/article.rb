@@ -3,6 +3,8 @@ class Article < ApplicationRecord
   belongs_to :category
   belongs_to :user
 
+  has_many :comments, dependent: :destroy
+
   # validações para o title e body que para o artigo ser salvo
   # é necessário que estes campos estejam preenchidos e com suas
   # quantidades de caracteres mínimos
