@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     # salva no artigo um comentário. não foi adicionado nenhuma variável pois ela não teria utilidade visto que,
     # precisamdos apenas do ato de salvar o comentário.
     @article.comments.create(comment_params.to_h.merge!({ user_id: current_user.id }))
-    redirect_to article_path(@article)
+    redirect_to article_path(@article), notice: 'Comment was successfully created.'
   end
 
   private
