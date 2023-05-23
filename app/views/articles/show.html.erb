@@ -20,5 +20,9 @@ cada comentário existente em @article -->
   <%= render @article.comments %>
 
   <h2>Add a comment:</h2>
-  <%= render 'comments/form' %>
+  <% if policy(:comment).create? %>
+    <%= render 'comments/form' %>
+  <% else %>
+    Please, login to create a comment.
+  <% end %>
 </article>
