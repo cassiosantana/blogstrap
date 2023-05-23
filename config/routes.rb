@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # articles#index significa: controller articles na action index
   # get '/articles/:id', to: 'articles#show'
 
-  resources :articles
+  resources :articles do
+    resources :comments, only: %i[create]
+  end
   resources :categories, except: [:show]
 end
