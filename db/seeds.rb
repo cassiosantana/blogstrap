@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Article.delete_all
+Category.destroy_all
+Article.destroy_all
 
 user = User.first
 text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed nulla consequat, imperdiet arcu sed,
@@ -22,6 +23,10 @@ Aliquam eget pulvinar metus. Nunc interdum lobortis mauris. In a magna ac sapien
 vitae consequat diam, a dictum justo. Nulla lectus sem, placerat ut ultricies sit amet, efficitur et magna.'
 
 p 'Iniciando ....'
+
+%w[Ruby Java JavaScript Python Elixir].each do |category|
+  Category.create(name: category)
+end
 
 Category.all.each do |category|
   30.times do
